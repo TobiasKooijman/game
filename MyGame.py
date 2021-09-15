@@ -9,13 +9,14 @@ print("Welcome to THE GAME")
 print("")
 Begin = input('Type START to begin or QUIT to quit ')
 start = 0
-if (Begin.lower() =="start"or"y"):
+if (Begin.lower() =="start"):
     Start = 1
-elif (Begin.lower() =="quit"or"n"):
+elif (Begin.lower() =="quit"):
     exit()
 
 
 # GAME BEGINNING
+
 
 print("Starting game...")
 import time
@@ -35,9 +36,9 @@ time.sleep(1)
 hello_01 = 'hello ' +str(name)
 print(hello_01)
 time.sleep(1)
-
+die = 'Rest In Peace '+str(name) + ' you will not be remembered...'
 # Name Easter Eggs
-
+swrd = 0
 if (name.lower()=="tobias kooijman"):
     print("Wow what a cool name! you sound very smart and handsome!!")
 elif (name.lower()=="king kong"):
@@ -50,8 +51,43 @@ elif (name.lower()=="max hofman"):
     print("you sound like someone who would buy an gaming laptop just to not play any games on it")
 elif (name.lower()=="joe"):
     print("Joe Mama! HA!")
+elif (name.lower()=="god"):
+    print("praise the lord!!")
+elif (name.lower()=="free sword"):
+    print("wow you got a free sword, you cheater!")
+    swrd = 1
+elif (name.lower()=="priest"):
+    print("Uh oh, why are you looking at that elementary school like that?")
+elif (name.lower()=="god mode"):
+    print("yeah, you wish")
+elif (name.lower()=="jeff besos"):
+    print("I LOVE AMAZON PLS GIVE ME YOUR MONEY")
+elif (name.lower()=="mr crabs"):
+    print("hello, I like money")
+elif (name.lower()=="die"):
+    print("you died!")
+    time.sleep(1)
+    print(die)
+    time.sleep(1)
+    exit()
 
+#age
 
+print("what is your age?")
+age = input('[Enter Number] Type your age here: ')
+if int(age) < int(12):
+    print("wow you are VERY joung, hmmmm, The priest will like you ;) ")
+elif int(age) < int(18):
+    print("a bit joung but its ok, the priest likes em joung")
+elif int(age) > int(18):
+    print("Your an adult, why are you playing this??")
+elif int(age) == int(18):
+    ("You just turned into an adult, then wtf are you doing playing this game?")
+else:
+    print("                             ERROR")
+    time.sleep(1)
+    print("That is an unvalid awnser, the game will now close")
+time.sleep(1)
 
 
 #Start Game
@@ -69,7 +105,7 @@ elif (start_adventure.lower()=="no"):
     time.sleep(1)
     exit()
 time.sleep(2)
-if bgn == 1:
+if bgn >= 1:
     print("_______________________________________________________________________________________________________________>")
     print("")
     print("")
@@ -172,6 +208,14 @@ if (escape==int("1")):
             print("an apple falls on your head")
             time.sleep(1)
             print("you die...")
+            print(die)
+        elif (wwyd_03_tree.lower()=="keep walking"):
+            time.sleep(1)
+            print("you keep walking,")
+            time.sleep(2)
+            print("forever...")
+            time.sleep(1.5)
+            print("the walk wil never end...")
             print(die)
     # east
     elif (wwyd_02.lower()=="go east"):
@@ -419,7 +463,7 @@ if (escape==int("1")):
             print("you walk around the church")
             walk_around = 1
 
-if walk_around == 1:
+if walk_around > 0:
     time.sleep(0.5)
     print("while you are walking around the church you get attacked by:")
     time.sleep(1.5)
